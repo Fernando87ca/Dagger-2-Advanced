@@ -15,24 +15,24 @@ import timber.log.Timber;
 
 public class RandomUserApplication extends Application {
 
-    //add application name in Manifest file
-    private RandomUserComponent randomUserApplicationComponent;
+  //add application name in Manifest file
+  private RandomUserComponent randomUserApplicationComponent;
 
-    public static RandomUserApplication get(Activity activity){
-        return (RandomUserApplication) activity.getApplication();
-    }
+  public static RandomUserApplication get(Activity activity) {
+    return (RandomUserApplication) activity.getApplication();
+  }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        Timber.plant(new Timber.DebugTree());
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    Timber.plant(new Timber.DebugTree());
 
-        randomUserApplicationComponent = DaggerRandomUserComponent.builder()
-                .contextModule(new ContextModule(this))
-                .build();
-    }
+    randomUserApplicationComponent = DaggerRandomUserComponent.builder()
+      .contextModule(new ContextModule(this))
+      .build();
+  }
 
-    public RandomUserComponent getRandomUserApplicationComponent(){
-        return randomUserApplicationComponent;
-    }
+  public RandomUserComponent getRandomUserApplicationComponent() {
+    return randomUserApplicationComponent;
+  }
 }

@@ -1,4 +1,3 @@
-
 package com.hariofspades.dagger2advanced.model;
 
 import com.google.gson.annotations.Expose;
@@ -9,32 +8,32 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Id {
 
-    @SerializedName("name")
-    @Expose
-    private String name;
-    @SerializedName("value")
-    @Expose
-    private String value;
+  @SerializedName("name")
+  @Expose
+  private String name;
+  @SerializedName("value")
+  @Expose
+  private String value;
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public String getValue() {
-        return value;
-    }
+  public String getValue() {
+    return value;
+  }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
+  public void setValue(String value) {
+    this.value = value;
+  }
 
-    @Override
-    public String toString() {
-        return new ToStringBuilder(this).append("name", name).append("value", value).toString();
-    }
+  @Override
+  public String toString() {
+    return new ToStringBuilder(this).append("name", name).append("value", value).toString();
+  }
 
 }

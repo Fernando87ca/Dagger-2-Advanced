@@ -2,7 +2,6 @@ package com.hariofspades.dagger2advanced.component;
 
 import com.hariofspades.dagger2advanced.interfaces.RandomUserApplicationScope;
 import com.hariofspades.dagger2advanced.interfaces.RandomUsersApi;
-import com.hariofspades.dagger2advanced.model.RandomUsers;
 import com.hariofspades.dagger2advanced.module.PicassoModule;
 import com.hariofspades.dagger2advanced.module.RandomUsersModule;
 import com.squareup.picasso.Picasso;
@@ -16,7 +15,7 @@ import dagger.Component;
 @Component(modules = {RandomUsersModule.class, PicassoModule.class})
 public interface RandomUserComponent {
 
-    RandomUsersApi getRandomUserService();
+  RandomUsersApi getRandomUserService();
 
-    Picasso getPicasso();
+  Picasso getPicasso();
 }
