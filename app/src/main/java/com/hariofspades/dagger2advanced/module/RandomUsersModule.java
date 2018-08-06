@@ -26,6 +26,7 @@ public class RandomUsersModule {
   @Provides
   public Retrofit retrofit(OkHttpClient okHttpClient,
                            GsonConverterFactory gsonConverterFactory, Gson gson) {
+
     return new Retrofit.Builder()
       .client(okHttpClient)
       .baseUrl("https://randomuser.me/")

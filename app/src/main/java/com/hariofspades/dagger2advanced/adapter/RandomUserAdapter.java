@@ -39,8 +39,10 @@ public class RandomUserAdapter extends RecyclerView.Adapter<RandomUserAdapter.Ra
   @Override
   public void onBindViewHolder(RandomUserViewHolder holder, int position) {
     Result result = resultList.get(position);
+
     holder.textView.setText(String.format("%s %s", result.getName().getFirst(),
       result.getName().getLast()));
+
     picasso.with(holder.imageView.getContext())
       .load(result.getPicture().getLarge())
       .into(holder.imageView);

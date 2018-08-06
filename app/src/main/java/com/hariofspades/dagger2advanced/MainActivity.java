@@ -70,15 +70,16 @@ public class MainActivity extends AppCompatActivity {
     mainActivityComponent.injectMainActivity(this);
   }
 
-  public void afterDagger() {
+/*  public void afterDagger() {
     RandomUserComponent daggerRandomUserComponent = DaggerRandomUserComponent.builder()
       .contextModule(new ContextModule(this))
       .build();
+
     picasso = daggerRandomUserComponent.getPicasso();
     randomUsersApi = daggerRandomUserComponent.getRandomUserService();
-  }
+  }*/
 
-  private void beforeDagger2() {
+/*  private void beforeDagger2() {
     GsonBuilder gsonBuilder = new GsonBuilder();
     Gson gson = gsonBuilder.create();
 
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
       .baseUrl("https://randomuser.me/")
       .addConverterFactory(GsonConverterFactory.create(gson))
       .build();
-  }
+  }*/
 
   private void initViews() {
     recyclerView = findViewById(R.id.recyclerView);

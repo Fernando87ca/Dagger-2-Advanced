@@ -27,7 +27,8 @@ public class RandomUserApplication extends Application {
     super.onCreate();
     Timber.plant(new Timber.DebugTree());
 
-    randomUserApplicationComponent = DaggerRandomUserComponent.builder()
+    randomUserApplicationComponent = DaggerRandomUserComponent
+      .builder()
       .contextModule(new ContextModule(this))
       .build();
   }
